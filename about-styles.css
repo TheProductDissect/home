@@ -289,6 +289,13 @@ h2 {
   #mobile-menu.is-active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+  @media screen and (max-width: 960px) {
+  .hero h1 {
+    font-size: 2px; /* Scaled down for mobile screens */
+    line-height: 1.5;   /* Improves multi-line readability */
+    padding: 0 15px 30px 15px; /* Adds horizontal breathing room */
+  }
+}
   #heading {
     font-size: 2rem;
     padding: 20px;
