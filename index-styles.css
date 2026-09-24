@@ -111,6 +111,20 @@ html {
 .main__content p {
   color: #fff;
 }
+.services-card p:not(.fear-text) {
+  text-align: center;
+   color: #ccc;
+}
+.services-card p.fear-text.fear-text {
+  font-size: 0.85rem;
+  color: #ff8177;
+  font-style: italic;
+  line-height: 1.6;
+  margin-top: 10px;
+  border-left: 3px solid #ff8177;
+  padding-left: 12px;
+  text-align: left;
+}
 
 @media screen and (max-width: 960px) {
   .navbar__container {
@@ -321,26 +335,35 @@ p{
   scroll-margin-top: 100px;
 }
 
-.services-card h3 {
+
+.services-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  padding: 20px;
+}
+
+.services-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #fff;
 }
 
 .services-card p {
-  text-align: left;
-  padding: 20px;
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.5;
+  max-width: 280px;
+  margin: 0 auto 20px;
+  text-align: center;
 }
 
-.services-card {
-  flex: 1;
-  padding: 20px;
-  align-items: center;
-}
 .services-card img {
-  width: 100%; /* Makes the image fill the card's width */
-  max-width: 200px; /* Adjust this number to the exact size you want */
-  height: auto; /* Keeps the image from looking squished or stretched */
-  display: block; /* Removes the weird gap at the bottom of images */
-  margin: 20px auto 0; /* Centers the image and adds space above it */
+  width: 100%;
+  max-width: 200px;
+  height: auto;
 }
 
 .services-grid {
