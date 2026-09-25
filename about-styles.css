@@ -101,7 +101,7 @@ html {
   border: none;
   outline: none;
   border-radius: 4px;
-  background: #F50057;
+  background: #f77062;
   color: #fff;
 }
 
@@ -114,7 +114,11 @@ html {
   color: #f77062;
   transition: all 0.3s ease;
 }
-
+#navbar__logo img {
+    height: 40px; /* Adjust this value to fit your navbar height */
+    width: auto;  /* Keeps the logo's original proportions */
+    display: block; /* Removes unwanted bottom spacing */
+}
 .main__content p {
   color: #fff;
 }

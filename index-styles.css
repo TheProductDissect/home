@@ -100,12 +100,17 @@ html {
 }
 
 .navbar__links:hover {
-  color: #F50057;
+  color: #f77062;
   transition: all 0.3s ease;
 }
 
 .navbar__links:active {
-  color: #F50057;
+  color: #f77062;
+}
+#navbar__logo img {
+    height: 40px; /* Adjust this value to fit your navbar height */
+    width: auto;  /* Keeps the logo's original proportions */
+    display: block; /* Removes unwanted bottom spacing */
 }
 
 .main__content p {
