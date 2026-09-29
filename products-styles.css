@@ -124,7 +124,21 @@
 .form-message.error {
   color: #ff0844;
 }
+.privacy-note {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 10px;
+  line-height: 1.5;
+}
 
+.privacy-link {
+  color: #666;
+  text-decoration: underline;
+}
+
+.privacy-link:hover {
+  color: #ff0844;
+}
 @media (max-width: 768px) {
   .products__content {
     padding: 40px 20px;
