@@ -56,8 +56,8 @@ html {
   text-decoration: none;
   text-align: center;
   padding: 10px 60px 10px;
-  font-size: 2.5rem;
-  color: hsl(240, 3%, 6%);
+  font-size: 2rem;
+  color: hsl(240, 56%, 94%);
   border-radius: 40px; /* Pill configuration shape profile border */
   background: #f77062;
   box-shadow: 0 4px 15px rgba(247, 112, 98, 0.25);
@@ -279,7 +279,7 @@ html {
 .statement-paragraph {
   font-size: 2.3rem; /* High Jomhuria standard letter output size rendering scale */
   line-height: 1.2;
-  letter-spacing: 0.05em;
+  
   margin-top: 2rem;
   margin-bottom: 2.5rem;
   max-width: 1050px;
@@ -287,13 +287,14 @@ html {
 }
 
 .statement-paragraph .inline-script {
-  font-size: 3rem;
+  font-size: 2.6rem;
   color: #ffffff;
   vertical-align: middle;
+  
 }
 
 .highlighting-color {
-  color: #fe5196;
+  color: #f77062; /* Primary branding highlight color */
 }
 
 /* ==========================================================================
@@ -369,17 +370,17 @@ html {
     grid-template-columns: 1fr;
     text-align: center;
     gap: 40px;
-    padding: 0 20px;
+    padding: 0 30px;
   }
 
   .hero-graphic-frame {
     margin: 0 auto; /* Centers the image frame horizontally */
   }
   .hero-pitch {
-    font-size: 2rem;
+    font-size: 2.3rem;
     color: #b3b3b3;
     margin-bottom: 2.5rem;
-    letter-spacing: 0.1rem;
+    
   }
 
   /* 3-Column Value Prop Layout Switch */
@@ -414,29 +415,30 @@ html {
   /* Prevent navigation links from clipping out of the screen bounds */
   .navbar__links {
     padding: 0 0.5rem;
-    font-size: 1.3rem;
+    
   }
 
   /* Manage typography limits for Jomhuria font scaling */
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
     line-height: 1;
   }
   .hero-title .highlight-text {
     font-size: 1.8rem;
   }
   .hero-pitch {
-    font-size: 0.5rem;
+    font-size: 2.3rem;
     color: #b3b3b3;
     margin-bottom: 2.5rem;
-    letter-spacing: 0.2rem;
+    
   }
 
   .statement-paragraph {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
   .statement-paragraph .inline-script {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    
   }
 }
 
