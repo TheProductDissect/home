@@ -1,0 +1,253 @@
+/* ==========================================================================
+   1. GLOBAL RESETS & CUSTOM FONT FAMILY ASYNC MAPPINGS
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #141414; /* Pure Figma pitch black configuration background */
+  color: #ffffff;
+}
+
+/* --- Font Utility Components --- */
+.hand-font {
+  font-family: "Just Another Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.2rem; /* Clean custom handwriting adjustments scale */
+  line-height: 1.2;
+}
+
+.jomhuria-font {
+  font-family: "Jomhuria", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.jomolhari-font {
+  font-family: "Jomolhari", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* UI Structural Utility Modifiers */
+.uppercase-heavy {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: none !important;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   2. REUSABLE COMPONENT ATOMS (Pill Buttons & Highlights)
+   ========================================================================== */
+/* The Pill-shaped Gradient Button used in Hero Section */
+.btn-pill-gradient {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 40px 10px;
+  font-size: 2rem;
+    color: hsl(240, 3%, 6%);
+
+  border-radius: 30px; /* Pill configuration shape profile border */
+  background: #f77062;
+  box-shadow: 0 4px 15px rgba(247, 112, 98, 0.25);
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.btn-pill-gradient:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #f77062 0%, #fe5196 100%);
+  opacity: 0.95;
+}
+
+/* The Bordered Hollow Outline Button inside redirect cards */
+.btn-outline-pill {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  padding: 6px 35px 10px;
+  font-size: 1.8rem;
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.btn-outline-pill:hover {
+  background-color: #ffffff;
+  color: #141414;
+}
+
+/* ==========================================================================
+   3. COMPONENT 1: NAVBAR CONTAINER MODULE
+   ========================================================================== */
+.navbar {
+  background: #141414;
+  height: 95px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 40px;
+}
+
+#navbar__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+#navbar__logo img,
+#navbar__logo svg {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0; /* 👈 Fixes the broken list shifting */
+  padding: 0; /* 👈 Fixes the broken list shifting */
+}
+
+.navbar__links {
+  font-family: "Jomhuria", serif;
+  color: #ffffff; /* 👈 Changed to match your bright white index text color */
+  text-decoration: none;
+  padding: 0 1.5rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.08em;
+  transition: color 0.2s ease;
+  line-height: 1; /* 👈 Aligns your links perfectly in the center of the bar */
+}
+
+.navbar__links:hover {
+  color: #f77062;
+}
+/* ==========================================================================
+   4. COMPONENT 2: CONSTRUCTION CONTAINER MODULE
+   ========================================================================== */
+.construction-container {
+  margin: 50px auto 200px;
+  text-align: center;
+  max-width: 550px;
+}
+.construction-title {
+  font-size: 5rem;
+}
+
+.highlight-text {
+  font-size: 3rem;
+}
+
+.statement-paragraph {
+  font-size: 2.3rem;
+}
+
+.construction-pitch {
+  font-size: 2rem;
+  color: #b3b3b3;
+  margin: 20px 20px 20px 20px;
+}
+/* ==========================================================================
+   5. RESPONSIVE MOBILE & TABLET NAVBAR NAVIGATION BREAKPOINT
+   ========================================================================== */
+
+/* Hide the hamburger icon by default on desktop screens */
+.navbar__toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar__toggle .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Media Query targeting Tablets and Phones (960px and down) */
+@media screen and (max-width: 960px) {
+  /* 1. Force the menu container to dynamically wrap onto a new line if needed */
+  .navbar__container {
+    position: relative;
+  }
+
+  /* 2. Make the hamburger visible */
+  .navbar__toggle {
+    display: block;
+  }
+
+  /* 3. Transform the links block into a full-width vertical layout */
+  .navbar__menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: -400px; /* Matches your desktop navbar height exactly */
+    left: 0; /* Hides the menu completely off-screen to the left */
+    opacity: 0;
+    transition: all 0.5s ease;
+    background: #141414; /* Matches background */
+    padding: 20px 0;
+    
+    z-index: 999;
+  }
+
+  /* 4. The trigger class to slide the menu into view when opened */
+  .navbar__menu.active {
+    top: 70px;
+    
+    opacity: 1;
+    
+  }
+
+  /* 5. Space out your vertical link rows for touch targets */
+  .navbar__links {
+    display: block;
+    text-align: center;
+    padding: 1.5rem 0;
+    width: 100%;
+  }
+
+  /* 6. OPTIONAL ANIMATION: Turns the 3 lines into an "X" when open */
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}

@@ -1,0 +1,348 @@
+/* ==========================================================================
+   1. GLOBAL RESETS & CUSTOM FONT FAMILY ASYNC MAPPINGS
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #141414; /* Pure Figma pitch black configuration background */
+  color: #ffffff;
+}
+
+/* --- Font Utility Components --- */
+.hand-font {
+  font-family: "Just Another Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.2rem; /* Clean custom handwriting adjustments scale */
+  line-height: 1.2;
+}
+
+.jomhuria-font {
+  font-family: "Jomhuria", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.jomolhari-font {
+  font-family: "Jomolhari", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* UI Structural Utility Modifiers */
+.uppercase-heavy {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: none !important;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   2. REUSABLE COMPONENT ATOMS (Pill Buttons & Highlights)
+   ========================================================================== */
+/* The Pill-shaped Gradient Button used in Hero Section */
+.btn-pill-gradient {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 45px 14px;
+  font-size: 2rem;
+  color: #ffffff;
+  border-radius: 30px; /* Pill configuration shape profile border */
+  background: #f77062;
+  box-shadow: 0 4px 15px rgba(247, 112, 98, 0.25);
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.btn-pill-gradient:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #f77062 0%, #fe5196 100%);
+  opacity: 0.95;
+}
+
+/* The Bordered Hollow Outline Button inside redirect cards */
+.btn-outline-pill {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  padding: 6px 35px 10px;
+  font-size: 1.8rem;
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.btn-outline-pill:hover {
+  background-color: #ffffff;
+  color: #141414;
+}
+
+/* ==========================================================================
+   3. COMPONENT 1: NAVBAR CONTAINER MODULE
+   ========================================================================== */
+.navbar {
+  background: #141414;
+  height: 95px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 40px;
+}
+
+#navbar__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+#navbar__logo img,
+#navbar__logo svg {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0; /* Fixes the broken list shifting */
+  padding: 0; /* Fixes the broken list shifting */
+}
+
+.navbar__links {
+  font-family: "Jomhuria", serif;
+  color: #ffffff; /* Changed to match your bright white index text color */
+  text-decoration: none;
+  padding: 0 1.5rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.08em;
+  transition: color 0.2s ease;
+  line-height: 1; /* Aligns your links perfectly in the center of the bar */
+}
+
+.navbar__links:hover {
+  color: #f77062;
+}
+
+/* ==========================================================================
+   4. COMPONENT 2: ABOUT STORY CONTAINER MODULE (Desktop Settings)
+   ========================================================================== */
+.about-section {
+  margin: 50px auto 200px;
+  max-width: 1200px;
+  padding: 0 40px;
+}
+
+.construction-title {
+  font-size: 5rem;
+  margin-bottom: 40px;
+  text-align: center;         /* Perfectly centers the main heading on top */
+}
+
+.about-grid-container {
+  display: flex;
+  align-items: flex-start;    /* Prevents the image container from stretching out vertically */
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.construction-content {
+  flex: 1.2;
+  text-align: left;
+}
+
+.paragraph-spacing {
+  margin-top: 15px;           /* Clean spacing class replacing inline HTML styles */
+}
+
+.cta-button-spacer {
+  margin-top: 25px;           /* Clean spacing class replacing inline HTML styles */
+}
+
+.construction-image-wrapper {
+  flex: 1;
+  max-width: 480px;
+}
+
+.construction-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Desktop-only Sticky Alignment Configurer */
+.desktop-only-graphic {
+  position: sticky;           /* Activates the layout lock properties */
+  top: 135px;                 /* Sets gap distance below fixed sticky navbar wrapper element */
+  display: block;             /* Visible on large display widths */
+}
+
+/* Hide mobile inline text image elements on standard laptop frames */
+.mobile-only-graphic {
+  display: none;
+}
+
+.highlight-text {
+  font-size: 3rem;
+}
+
+.statement-paragraph {
+  font-size: 2.3rem;
+}
+
+.construction-pitch {
+  font-size: 2rem;
+  color: #b3b3b3;
+  margin: 30px 0 20px 0;
+}
+
+/* ==========================================================================
+   5. RESPONSIVE MOBILE & TABLET NAVBAR NAVIGATION BREAKPOINT
+   ========================================================================== */
+.navbar__toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar__toggle .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 960px) {
+  .statement-paragraph {
+    margin: 15px 20px;
+    font-size: 2rem;
+    color: #bebebe;
+  }
+  
+  .navbar__container {
+    position: relative;
+  }
+
+  .navbar__toggle {
+    display: block;
+  }
+
+  .navbar__menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: -400px;
+    left: 0;
+    opacity: 0;
+    transition: all 0.5s ease;
+    background: #141414;
+    padding: 20px 0;
+    z-index: 999;
+  }
+
+  .navbar__menu.active {
+    top: 70px;
+    opacity: 1;
+  }
+
+  .navbar__links {
+    display: block;
+    text-align: center;
+    padding: 1.5rem 0;
+    width: 100%;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Snaps grid down to an un-flexed structural state profile on handheld panels */
+  .about-grid-container {
+    display: block;
+  }
+
+  .about-section {
+    margin: 30px auto 100px;
+    padding: 0 10px;
+  }
+
+  .construction-title {
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+
+  .construction-content {
+    text-align: center;
+  }
+
+  /* 🌟 MOBILE PILL GRAPHIC PRESENTATION: Hides sidebar view, forces center content display inline */
+  .desktop-only-graphic {
+    display: none;             /* Shuts down the desktop side-bar image wrapper */
+  }
+
+  .mobile-only-graphic {
+    display: block;            /* Reveals the picture right inside the text flow hierarchy */
+    max-width: 65%;            /* Clean centered mobile screen size layout footprint */
+    margin: 25px auto;         /* Centers the image perfectly while pushing paragraphs away evenly */
+  }
+  
+  .construction-pitch {
+    margin: 30px 20px 20px 20px;
+  }
+}
+
+/* Image outline box configuration mimicking the selection view window */
+.hero-graphic-frame {
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-graphic-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+}

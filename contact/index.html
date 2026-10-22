@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact-styles.css" />
+    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Jomolhari&family=Just+Another+Hand&display=swap" rel="stylesheet">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "2WXJnoGdo93sd7bU2",
+            });
+        })();
+    </script>
+  </head>
+  <body>
+    <!--navbar section-->
+      <!-- ==========================================
+       COMPONENT 1: THE GLOBAL NAVIGATION BAR
+       ========================================== -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <!-- Logo Block: Uses Jomolhari for structured look -->
+      <a href="/" id="navbar__logo" class="navbar-logo-link">
+  <img src="/images/THE PRODUCT DISSECT(1).svg" alt="The Product Dissect Logo" class="navbar-logo-img">
+</a>
+
+<!-- 🌟 ADD THIS: The Hamburger Toggle Button -->
+    <div class="navbar__toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+      
+      <!-- Navigational Links -->
+      <ul class="navbar__menu">
+        <li class="navbar__item"><a href="/" class="navbar__links">HOME</a></li>
+        <li class="navbar__item"><a href="/blogs" class="navbar__links">BLOGS</a></li>
+        <li class="navbar__item"><a href="/about" class="navbar__links">ABOUT</a></li>
+        <li class="navbar__item"><a href="/contact" class="navbar__links">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="contact-section">  <!-- Section Title -->
+  <h1 class="contact-main-title jomhuria-font uppercase-heavy">Contact</h1>
+
+  <!-- CENTERED 2-COLUMN INFO CARD -->
+  <div class="contact-info-card">
+    
+    <!-- Row 1: Book a Call -->
+<div class="info-table-row">
+  <div class="info-label jomhuria-font">Talk to us</div>
+  <div class="info-value">
+    <a class="btn-pill-gradient hand-font" style="font-size:28px;" href="https://calendar.zoho.in/zc/view/slot-booking/0802123ef2497fbdbe1f6a45f5756edf00004adc3817d7b44758c1d85b37c9b8cb9b997300918080772b2165cc33fce0b1c47948aa1495c61b1555c58d7772cbc695" target="_blank">Book a call</a>
+  </div>
+</div>
+
+
+    <!-- Row 2: Email -->
+    <div class="info-table-row">
+      <div class="info-label jomhuria-font">Email</div>
+      <div class="info-value">
+        <a href="mailto:hello@theproductdissect.com" class="text-lowercase">hello@theproductdissect</a>
+      </div>
+    </div>
+
+    <!-- Row 3: WhatsApp Number -->
+    <div class="info-table-row">
+      <div class="info-label jomhuria-font">What'sApp </div>
+      <div class="info-value">
+        <a href="https://wa.me/919353918023" target="_blank">+91 93539 18023</a>
+      </div>
+    </div>
+
+    <!-- Row 4: LinkedIn -->
+    <div class="info-table-row">
+      <div class="info-label jomhuria-font">LinkedIn</div>
+      <div class="info-value">
+        <a href="https://www.linkedin.com/in/lakshmi-siddaveer" target="_blank">in/lakshmi-siddaveer</a>
+      </div>
+    </div>
+
+    <!-- Row 5: Instagram -->
+    <div class="info-table-row">
+      <div class="info-label jomhuria-font">Instagram</div>
+      <div class="info-value">
+        <a href="https://www.instagram.com/theproductdissect?xtok=eHl2Y3ZxY3cwanNn" target="_blank">@theproductdissect</a>
+      </div>
+    </div>
+
+    <!-- Row 6: Substack -->
+    <div class="info-table-row">
+      <div class="info-label jomhuria-font">Substack</div>
+      <div class="info-value">
+        <a href="http://theproductdissect.substack.com" target="_blank">theproductdissect.substack.com</a>
+      </div>
+    </div>
+
+  </div> 
+</main>
+     
+    
+    
+    <script src="/contact/contact.js"></script>
+  </body>
+</html>

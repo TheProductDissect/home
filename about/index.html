@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+
+    <!-- Path absolute reference pointing back to the root CSS file -->
+    <link rel="stylesheet" href="about-styles.css" />
+
+    <!-- Fonts Embed -->
+    <!-- Exact Google Fonts Embed Provided By User -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Jomolhari&family=Just+Another+Hand&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ==========================================
+       COMPONENT 1: THE GLOBAL NAVIGATION BAR
+       ========================================== -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <!-- Logo Block: Uses Jomolhari for structured look -->
+        <a href="#" id="navbar__logo" class="navbar-logo-link">
+          <img
+            src="/images/THE PRODUCT DISSECT(1).svg"
+            alt="The Product Dissect Logo"
+            class="navbar-logo-img"
+        /></a>
+
+        <!-- ADD THIS: The Hamburger Toggle Button -->
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <!-- Navigational Links -->
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="/index.html" class="navbar__links">HOME</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/blogs" class="navbar__links">BLOGS</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/about" class="navbar__links">ABOUT</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/contact" class="navbar__links">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ==========================================================================
+   4. COMPONENT 2: ABOUT STORY MODULE (Title Top -> Responsive Grid)
+   ========================================================================== -->
+<main class="about-section">
+  
+  <!-- 1. FULL WIDTH TITLE: Spans alone on top, completely center-aligned -->
+  <h1 class="construction-title jomhuria-font uppercase-heavy">MY STORY</h1>
+
+  <!-- 2. GRID WRAPPER: Manages columns on desktop, handles reading blocks on mobile -->
+  <div class="about-grid-container">
+    
+    <!-- LEFT SIDE COLUMN: Biography narrative blocks -->
+    <div class="construction-content">
+      
+      <p class="statement-paragraph hand-font">
+        Hi! I'm Lakshmi. I'm an engineer by degree (Medical Electronics), but I spent all 4 years of college in our design team, haha.
+      </p>
+
+      <!-- 🌟 MOBILE-ONLY IMAGE: Injected exactly after the 1st paragraph -->
+      <div class="construction-image-wrapper mobile-only-graphic">
+        <img src="/images/LakshmiProfile.jpeg" alt="Lakshmi's Workspace Setup" />
+      </div>
+
+      <p class="statement-paragraph hand-font paragraph-spacing">
+        At KPMG, I work as an Associate Consultant in Digital Transformation. On the side, I obsess over product design and product management. I kept noticing that the products people loved weren't always the best looking or the most powerful. So I started taking them apart to figure out why, and behavioural economics kept turning up as the root cause.
+      </p>
+
+      <p class="statement-paragraph hand-font paragraph-spacing">
+        That question is how I design now: how do I make someone pick this, stay, and pay without feeling guilty about it? This page is where I take products apart, then rebuild them with personas, user flows, and brand strategy to show what I'd do differently.
+      </p>
+
+      <p class="statement-paragraph hand-font paragraph-spacing">
+        The design craft comes from college. Across 8 fests I went from design volunteer to junior coordinator to senior coordinator, then mentor in my final year. We made logos, posters, stamps, and merchandise, and footfall went from literally 0 (thanks, covid) to over 40k. In 2023 I was design head of the Association of Medical Electronics, where I built the whole brand, the Instagram grid, and templates that got member write-ups out as posts much faster.
+      </p>
+
+      <p class="statement-paragraph hand-font paragraph-spacing">
+        I design products people choose, and I study why they do.
+      </p>
+
+      <div class="construction-pitch jomhuria-font uppercase-heavy">
+        Got a product that's not getting the pick, stay, or pay you hoped for? I'll take a free look. Book a free call!
+      </div>
+      
+      <div class="cta-button-spacer">
+        <a href="#" class="btn-pill-gradient hand-font">Let's schedule that call!</a>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE COLUMN: Desktop layout image wrapper frame -->
+    <div class="construction-image-wrapper desktop-only-graphic">
+      <img src="/images/LakshmiProfile.jpeg" alt="Lakshmi's Workspace Setup" />
+    </div>
+
+  </div>
+</main>
+
+    <script src="/blogs/blogs.js"></script>
+  </body>
+</html>
+
